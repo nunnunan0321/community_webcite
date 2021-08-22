@@ -5,7 +5,8 @@
       <div class="bg-gray-100 p-4 rounded-xl shadow-md" v-for="(val, idx) in state.post_list" :key="idx">
           <p class="font-bold">{{val?.title}}</p>
           <p class="text-sm">{{val?.time.toLocaleString()}}</p>
-          <p class="text=sm">{{val?.author}},{{val?.read_count}}명 읽음</p>
+          <p class="text-sm">{{val?.author}}</p>
+          <p class="text-sm">{{val?.read_count}}명 읽음</p>
       </div>
     </div>
   </div>
@@ -33,10 +34,10 @@
   onMounted(()=>{
     setTimeout(()=>{
       state.post_list=[
-        new Post("ㅇㅏㄴ녀ㅇ 하세요 ? ㅇ아니 이발롬 왜 지ㄹㅣㅑ 랄이",new Date(), "나",2),
-        new Post("게시물입니다",new Date(),"ㅈㄷㅇ",2),
-        new Post("134",new Date(), "ㅂㅎㅊ",2),
-        new Post("ㄴㅇ려ㅑㅈㄷ라",new Date(),"ㅈㅇㅅ",2)
+        new Post("Kotlin을 사용해야 하는 이유",new Date(), "다은",23),
+        new Post("코딩 입문 언어는 C언어죠",new Date(),"파이썬 싫어",39),
+        new Post("최고의 동아리 EDCAN",new Date(), "밤샘 개발자",59),
+        new Post("부장님 사랑합니다",new Date(),"vue강의 개꿀",44)
     
       ];
       state.isLoaded=true;
